@@ -20,7 +20,7 @@ import { SiWordpress } from "react-icons/si";
 import { FiGithub, FiSend } from "react-icons/fi";
 import { useEffect, useState } from "react";
 import pic1 from "./pic2.png";
-import me from "./me2.png";
+import me from "./me.png";
 function App() {
   const [isOpen, setIsOpen] = useState(false);
   const openModal = () => setIsOpen(true);
