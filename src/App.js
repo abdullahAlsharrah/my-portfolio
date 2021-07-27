@@ -28,11 +28,11 @@ function App() {
   const openModal = () => setIsOpen(true);
   const closeModal = () => setIsOpen(false);
 
-  const [active, setActive] = useState("Home");
+  // const [active, setActive] = useState("Home");
 
-  const close = (page) => {
+  const close = () => {
     closeModal();
-    setActive(page);
+    // setActive(page);
   };
   // const slides = window.onload
   //   ? null
@@ -55,8 +55,7 @@ function App() {
         const el = document.getElementById(item.getAttribute("data-link"));
         el.scrollIntoView({ behavior: "smooth", block: "start" });
         el.classList.add("active");
-        setActive(el.id);
-        console.log(el.id);
+        // setActive(el.id);
 
         if (isOpen) {
           closeModal();
