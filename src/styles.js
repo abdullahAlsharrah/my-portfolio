@@ -961,6 +961,7 @@ export const Body = styled.div`
         &.linkedin {
           font-size: 25px;
           font-weight: 900;
+          text-decoration: none;
           -webkit-text-stroke: 1.5px lightblue;
           letter-spacing: 1.5px;
           color: white;

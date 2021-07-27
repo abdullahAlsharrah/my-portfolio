@@ -21,6 +21,8 @@ import { FiGithub, FiSend } from "react-icons/fi";
 import { useEffect, useState } from "react";
 import pic1 from "./pic2.png";
 import me from "./me.png";
+import Abdullah_Alsharrah from "./Abdullah-Alsharrah.pdf";
+import { Link } from "react-router-dom";
 function App() {
   const [isOpen, setIsOpen] = useState(false);
   const openModal = () => setIsOpen(true);
@@ -77,44 +79,55 @@ function App() {
           <li
             className="nav-item"
             data-link="home"
-            style={{ color: active === "home" ? "lightblue" : null }}
+            // style={{ color: active === "home" ? "lightblue" : null }}
           >
             Home
           </li>
           <li
             className="nav-item"
             data-link="about"
-            style={{ color: active === "about" ? "lightblue" : null }}
+            // style={{ color: active === "about" ? "lightblue" : null }}
           >
             About
           </li>
           <li
             className="nav-item"
             data-link="skills"
-            style={{ color: active === "skills" ? "lightblue" : null }}
+            // style={{ color: active === "skills" ? "lightblue" : null }}
           >
             Skills
           </li>
           <li
             className="nav-item"
             data-link="services"
-            style={{ color: active === "services" ? "lightblue" : null }}
+            // style={{ color: active === "services" ? "lightblue" : null }}
           >
             Services
           </li>
           <li
             className="nav-item"
             data-link="portfolio"
-            style={{ color: active === "portfolio" ? "lightblue" : null }}
+            // style={{ color: active === "portfolio" ? "lightblue" : null }}
           >
             Portfolio
           </li>
+
           <li
-            className="nav-item"
-            data-link="contact-me"
-            style={{ color: active === "contact-me" ? "lightblue" : null }}
+          //  style={{ color: active === "contact-me" ? "lightblue" : null }}
           >
-            Contact me
+            <Link
+              style={{
+                textDecoration: "none",
+                color: "unset",
+              }}
+              to="#"
+              onClick={(e) => {
+                window.location = "mailto:adbdb.27@gmail.com";
+                e.preventDefault();
+              }}
+            >
+              Contact me
+            </Link>
           </li>
         </ul>
         <Menu className="menu" isOpen={isOpen}>
@@ -122,7 +135,7 @@ function App() {
             className="menu-item nav-item"
             data-link="home"
             onClick={() => close("Home")}
-            style={{ color: active === "home" ? "lightblue" : null }}
+            // style={{ color: active === "home" ? "lightblue" : null }}
           >
             <BiHomeAlt size={25} />
             <p>Home</p>
@@ -130,7 +143,7 @@ function App() {
           <div
             className="menu-item nav-item"
             data-link="about"
-            style={{ color: active === "about" ? "lightblue" : null }}
+            // style={{ color: active === "about" ? "lightblue" : null }}
           >
             <IoPersonOutline size={25} />
             <p>About</p>
@@ -138,7 +151,7 @@ function App() {
           <div
             className="menu-item nav-item"
             data-link="skills"
-            style={{ color: active === "skills" ? "lightblue" : null }}
+            // style={{ color: active === "skills" ? "lightblue" : null }}
           >
             <CgNotes size={25} />
             <p>Skills</p>
@@ -146,7 +159,7 @@ function App() {
           <div
             className="menu-item nav-item"
             data-link="services"
-            style={{ color: active === "services" ? "lightblue" : null }}
+            // style={{ color: active === "services" ? "lightblue" : null }}
           >
             <MdBusinessCenter size={25} />
             <p>Services</p>
@@ -154,19 +167,30 @@ function App() {
           <div
             className="menu-item nav-item"
             data-link="portfolio"
-            style={{ color: active === "portfolio" ? "lightblue" : null }}
+            // style={{ color: active === "portfolio" ? "lightblue" : null }}
           >
             <BiImage size={25} />
             <p>Portfolio</p>
           </div>
-          <div
-            className="menu-item nav-item"
-            data-link="contact-me"
-            style={{ color: active === "contact-me" ? "lightblue" : null }}
+          <Link
+            style={{
+              textDecoration: "none",
+              color: "unset",
+            }}
+            to="#"
+            onClick={(e) => {
+              window.location = "mailto:adbdb.27@gmail.com";
+              e.preventDefault();
+            }}
           >
-            <BiMailSend size={25} />
-            <p>Contact me</p>
-          </div>
+            <div
+              className="menu-item "
+              // style={{ color: active === "contact-me" ? "lightblue" : null }}
+            >
+              <BiMailSend size={25} />
+              Contact me
+            </div>
+          </Link>
         </Menu>
       </NavBar>
 
@@ -174,11 +198,42 @@ function App() {
         <div className="flex">
           <div className="container">
             <div className="social">
-              <FiGithub size={20} style={{ margin: 5, color: "lightblue" }} />
-              <p className="linkedin" style={{ margin: 5 }}>
-                in
-              </p>
-              <FiSend size={20} style={{ margin: 5, color: "lightblue" }} />
+              <Link
+                to={{
+                  pathname: "https://github.com/abdullahAlsharrah",
+                }}
+                target="_blank"
+              >
+                <FiGithub size={25} style={{ margin: 5, color: "lightblue" }} />
+              </Link>
+
+              <Link
+                to={{
+                  pathname:
+                    "https://www.linkedin.com/in/abdullah-alsharrah-680255203/",
+                }}
+                target="_blank"
+                style={{
+                  textDecoration: "none",
+                }}
+              >
+                <p className="linkedin" style={{ margin: 5 }}>
+                  in
+                </p>
+              </Link>
+              <Link
+                style={{
+                  textDecoration: "none",
+                  color: "unset",
+                }}
+                to="#"
+                onClick={(e) => {
+                  window.location = "mailto:adbdb.27@gmail.com";
+                  e.preventDefault();
+                }}
+              >
+                <FiSend size={25} style={{ margin: 5, color: "lightblue" }} />
+              </Link>
             </div>
             <div className="imageContainer">
               <img alt="" src={me} />
@@ -191,16 +246,57 @@ function App() {
               High level experience in web pages and apps, desgin and developing
               knowladge, producing quality work.
             </p>
-            <button className="contact-me">
-              <p>Contact me</p> <IoSend />
-            </button>
+            <Link
+              style={{
+                textDecoration: "none",
+              }}
+              to="#"
+              onClick={(e) => {
+                window.location = "mailto:adbdb.27@gmail.com";
+                e.preventDefault();
+              }}
+            >
+              <button className="contact-me">
+                <p>Contact me</p> <IoSend />
+              </button>
+            </Link>
           </div>
           <div className="widthSocial">
-            <FiGithub size={25} style={{ margin: 5, color: "lightblue" }} />
-            <p className="linkedin" style={{ margin: 5 }}>
-              in
-            </p>
-            <FiSend size={25} style={{ margin: 5, color: "lightblue" }} />
+            <Link
+              to={{
+                pathname: "https://github.com/abdullahAlsharrah",
+              }}
+              target="_blank"
+            >
+              <FiGithub size={25} style={{ margin: 5, color: "lightblue" }} />
+            </Link>
+            <Link
+              to={{
+                pathname:
+                  "https://www.linkedin.com/in/abdullah-alsharrah-680255203/",
+              }}
+              target="_blank"
+              style={{
+                textDecoration: "none",
+              }}
+            >
+              <p className="linkedin" style={{ margin: 5 }}>
+                in
+              </p>
+            </Link>{" "}
+            <Link
+              style={{
+                textDecoration: "none",
+                color: "unset",
+              }}
+              to="#"
+              onClick={(e) => {
+                window.location = "mailto:adbdb.27@gmail.com";
+                e.preventDefault();
+              }}
+            >
+              <FiSend size={25} style={{ margin: 5, color: "lightblue" }} />
+            </Link>
           </div>
         </div>
         <div className="about" id="about">
@@ -238,9 +334,20 @@ function App() {
               </div>
             </div>
           </div>
-          <button className="contact-me">
-            <p>Download CV</p> <MdFileDownload />
-          </button>
+
+          <Link
+            style={{
+              textDecoration: "none",
+            }}
+            to={Abdullah_Alsharrah}
+            // src="/Abdullah-Alsharrah.pdf"
+            target="_blank"
+            download
+          >
+            <button className="contact-me">
+              <p>Download CV</p> <MdFileDownload />
+            </button>
+          </Link>
         </div>
         <div className="about" id="skills">
           <p className="title">Skills</p>
@@ -601,7 +708,8 @@ function App() {
             <div className={counter === 3 ? "active" : null}></div>
           </div>
         </div>
-        <div
+
+        {/* <div
           className="contactmeBox"
           id="contact-me"
           style={{ marginTop: 100 }}
@@ -610,7 +718,7 @@ function App() {
           <p className="small">
             Conatct me know and get 30% off on your new project
           </p>
-        </div>
+        </div> */}
       </Body>
     </>
   );
