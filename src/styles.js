@@ -195,9 +195,9 @@ export const Body = styled.div`
   }
   div {
     &.contactmeBox {
-      width: 100%;
+      width: 90%;
       padding: 20px;
-
+      margin: auto;
       /* display: flex; */
       justify-content: center;
       align-items: center;
@@ -710,8 +710,12 @@ export const Body = styled.div`
           }
         }
         &.slides-contaienr {
-          margin: auto;
+          /* margin: auto; */
           position: relative;
+          @media (max-width: 400px) {
+            width: 125%;
+            margin-left: 8px;
+          }
           width: 100%;
           height: 100%;
           /* z-index: -1; */
@@ -733,7 +737,7 @@ export const Body = styled.div`
           padding: 10px;
           position: relative;
           height: 100%;
-          width: 80%;
+          width: 100%;
           overflow: hidden;
         }
 
