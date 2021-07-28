@@ -812,7 +812,9 @@ export const Body = styled.div`
             margin: 10px;
             border-radius: 20px;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.9);
-
+            @media (max-width: 750px) {
+              border-radius: 15px;
+            }
             &.border {
               border: 1px solid #e9e9e9;
               box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
@@ -825,6 +827,7 @@ export const Body = styled.div`
               @media (max-width: 750px) {
                 max-width: 50%;
                 max-height: 350px;
+                border-radius: 25px;
               }
             }
             @media (max-width: 750px) {
