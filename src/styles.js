@@ -807,12 +807,28 @@ export const Body = styled.div`
             }
           }
           img {
-            width: 40%;
+            max-width: 50%;
             max-height: 450px;
             margin: 10px;
             border-radius: 20px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.9);
+
+            &.border {
+              border: 1px solid #e9e9e9;
+              box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+            }
+            &.phone {
+              max-width: 35%;
+              max-height: 450px;
+              border-radius: 35px;
+
+              @media (max-width: 750px) {
+                max-width: 50%;
+                max-height: 350px;
+              }
+            }
             @media (max-width: 750px) {
-              width: unset;
+              max-width: 90%;
             }
           }
         }
