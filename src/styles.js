@@ -479,8 +479,6 @@ export const Body = styled.div`
       }
     }
     &.skillsRow {
-      cursor: pointer;
-
       div {
         &.row {
           display: flex;
@@ -512,6 +510,10 @@ export const Body = styled.div`
       }
     }
     &.modalBox {
+      @media (min-width: 700px) {
+        cursor: pointer;
+      }
+
       display: flex;
       justify-content: center;
       align-items: center;
@@ -634,7 +636,12 @@ export const Body = styled.div`
         }
       }
     }
+
     &.modal {
+      @media (min-width: 700px) {
+        cursor: pointer;
+      }
+
       width: unset;
       height: unset;
       margin: 20px;
@@ -1012,20 +1019,16 @@ export const Body = styled.div`
     &.imageContainer {
       box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
 
-      @media (min-width: 1000px) {
-        height: 450px;
-        width: 450px;
-      }
       @media (min-width: 700px) {
         height: 350px;
         width: 350px;
       }
       position: relative;
-      display: flex;
+      display: block;
       justify-content: center;
       align-items: center;
       align-content: center;
-      height: 200px;
+      height: 230px;
       width: 230px;
       border-radius: 50% 50% 50% 50% / 30% 30% 70% 70%;
       background-color: lightblue;
@@ -1033,23 +1036,21 @@ export const Body = styled.div`
       img {
         position: absolute;
         /* top: s0px; */
-        margin-top: 250px;
-        margin-right: 300px;
-        @media (min-width: 1000px) {
-          height: 950px;
-          width: 850px;
-          margin-top: 350px;
-          margin-right: 500px;
-        }
+
         @media (min-width: 700px) {
           height: 980px;
           width: 870px;
-          margin-top: 320px;
-          margin-right: 420px;
+          top: -120px;
+          right: -60px;
+          /* display: none; */
         }
 
-        height: 650px;
-        width: 650px;
+        @media (max-width: 700px) {
+          height: 650px;
+          width: 650px;
+          top: -110px;
+          right: -60px;
+        }
       }
     }
     &.intro {
