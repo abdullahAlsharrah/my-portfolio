@@ -510,7 +510,6 @@ export const Body = styled.div`
       }
     }
     &.modalBox {
-      /* z-index: 1; */
       @media (min-width: 700px) {
         cursor: pointer;
       }
