@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const NavBar = styled.div`
   position: fixed;
-  z-index: 1;
+  z-index: 10;
   display: flex;
   align-items: center;
   flex-direction: row;
@@ -510,6 +510,7 @@ export const Body = styled.div`
       }
     }
     &.modalBox {
+      /* z-index: 1; */
       @media (min-width: 700px) {
         cursor: pointer;
       }
@@ -537,6 +538,8 @@ export const Body = styled.div`
         box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
       }
       div {
+        z-index: 1;
+
         &.block {
           @media (max-width: 800px) {
             /* width: 80%; */
