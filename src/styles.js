@@ -537,9 +537,8 @@ export const Body = styled.div`
         box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
       }
       div {
-        z-index: 1;
-
         &.block {
+          z-index: 1;
           @media (max-width: 800px) {
             /* width: 80%; */
           }
