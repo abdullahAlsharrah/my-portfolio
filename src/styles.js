@@ -443,7 +443,7 @@ export const Body = styled.div`
             position: absolute;
             left: 0;
             bottom: -4px;
-            width: 50%;
+            width: 60%;
             padding-bottom: 20px;
             border-bottom: 4px solid lightblue;
           }

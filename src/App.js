@@ -10,7 +10,7 @@ import { IoPersonOutline, IoSend } from "react-icons/io5";
 import { CgDatabase, CgNotes } from "react-icons/cg";
 import {
   MdBusinessCenter,
-  MdFileDownload,
+  // MdFileDownload,
   MdKeyboardArrowLeft,
   MdKeyboardArrowRight,
   MdStyle,
@@ -24,7 +24,7 @@ import me from "./pics/me.png";
 import website from "./pics/website.png";
 import main from "./pics/main.png";
 import reUseMain from "./pics/reuse.png";
-import Abdullah_Alsharrah from "./Abdullah-Alsharrah.pdf";
+// import Abdullah_Alsharrah from "./Abdullah-Alsharrah.pdf";
 import { Link } from "react-router-dom";
 function App() {
   const [isOpen, setIsOpen] = useState(false);
@@ -124,10 +124,9 @@ function App() {
               }}
               to="#"
               onClick={(e) => {
-                window.location = "mailto:aksharrah@gmail.com";
+                window.location = "mailto:projects@hamiltonkw.com";
                 e.preventDefault();
-              }}
-            >
+              }}>
               Contact me
             </Link>
           </li>
@@ -181,10 +180,9 @@ function App() {
             }}
             to="#"
             onClick={(e) => {
-              window.location = "mailto:aksharrah@gmail.com";
+              window.location = "mailto:projects@hamiltonkw.com";
               e.preventDefault();
-            }}
-          >
+            }}>
             <div
               className="menu-item "
               // style={{ color: active === "contact-me" ? "lightblue" : null }}
@@ -204,8 +202,7 @@ function App() {
                 to={{
                   pathname: "https://github.com/abdullahAlsharrah",
                 }}
-                target="_blank"
-              >
+                target="_blank">
                 <FiGithub size={25} style={{ margin: 5, color: "lightblue" }} />
               </Link>
 
@@ -217,8 +214,7 @@ function App() {
                 target="_blank"
                 style={{
                   textDecoration: "none",
-                }}
-              >
+                }}>
                 <p className="linkedin" style={{ margin: 5 }}>
                   in
                 </p>
@@ -232,8 +228,7 @@ function App() {
                 onClick={(e) => {
                   window.location = "mailto:aksharrah@gmail.com";
                   e.preventDefault();
-                }}
-              >
+                }}>
                 <FiSend size={25} style={{ margin: 5, color: "lightblue" }} />
               </Link>
             </div>
@@ -256,8 +251,7 @@ function App() {
               onClick={(e) => {
                 window.location = "mailto:aksharrah@gmail.com";
                 e.preventDefault();
-              }}
-            >
+              }}>
               <button className="contact-me">
                 <p>Contact me</p> <IoSend />
               </button>
@@ -268,8 +262,7 @@ function App() {
               to={{
                 pathname: "https://github.com/abdullahAlsharrah",
               }}
-              target="_blank"
-            >
+              target="_blank">
               <FiGithub size={25} style={{ margin: 5, color: "lightblue" }} />
             </Link>
             <Link
@@ -280,8 +273,7 @@ function App() {
               target="_blank"
               style={{
                 textDecoration: "none",
-              }}
-            >
+              }}>
               <p className="linkedin" style={{ margin: 5 }}>
                 in
               </p>
@@ -295,8 +287,7 @@ function App() {
               onClick={(e) => {
                 window.location = "mailto:aksharrah@gmail.com";
                 e.preventDefault();
-              }}
-            >
+              }}>
               <FiSend size={25} style={{ margin: 5, color: "lightblue" }} />
             </Link>
           </div>
@@ -307,12 +298,13 @@ function App() {
           <div className="containerRow">
             <img alt="" src={pic1} />
             <div>
+              {/* I'm a Kuwaiti exper freelancing part
+                time in Kuwait and throughout the Middle East. */}
               <p className="paragraph">
-                Hi, my name is Abdullah. I'm a Kuwaiti expat freelancing part
-                time in Kuwait and throughout the Middle East. I'm a web and
-                apps develepor, with extencive knowladge and years of
-                experiences, working in web technologies and UI / UX design
-                producing quality work.
+                Hi, my name is Abdullah. I'm the OP (operation manager) in
+                Hamilton Services Kuwait. I'm a web and apps develepor, with
+                extencive knowladge and years of experiences, working in web
+                technologies and UI / UX design producing quality work.
               </p>
               {/* <p className="paragraph">
                 I provide a very personal service, I like to spend time getting
@@ -322,34 +314,33 @@ function App() {
               </p> */}
               <div className="experiencesNo">
                 <div className="box">
-                  <p className="number">04+</p>
+                  <p className="number">06+</p>
                   <p className="explain"> Years Experiance </p>
                 </div>
                 <div className="box">
-                  <p className="number">10+</p>
+                  <p className="number">15+</p>
                   <p className="explain"> Completed Project </p>
                 </div>
                 <div className="box">
-                  <p className="number">02+</p>
+                  <p className="number">03+</p>
                   <p className="explain"> Companies Work </p>
                 </div>
               </div>
             </div>
           </div>
 
-          <Link
+          {/* <Link
             style={{
               textDecoration: "none",
             }}
             to={Abdullah_Alsharrah}
             // src="/Abdullah-Alsharrah.pdf"
             target="_blank"
-            download
-          >
+            download>
             <button className="contact-me">
               <p>Download CV</p> <MdFileDownload />
             </button>
-          </Link>
+          </Link> */}
         </div>
         <div className="about" id="skills">
           <p className="title">Skills</p>
@@ -362,8 +353,7 @@ function App() {
                   section !== "front"
                     ? () => setSection("front")
                     : () => setSection("")
-                }
-              >
+                }>
                 <BiCodeCurly size={35} color="lightblue" />
                 <div className="skills">
                   <p className="skillTitle">FrontEnd Developer</p>
@@ -373,17 +363,17 @@ function App() {
                 <BiChevronDown size={35} color="lightblue" />
               </div>
               <div className="drop front">
-                <div className="htmlline">
+                <div className="reactline">
                   <p className="html">HTML</p>
-                  <p className="perc">80%</p>
+                  <p className="perc">95%</p>
                 </div>
                 <div className="cssline">
                   <p className="htlm">CSS</p>
                   <p className="perc">85%</p>
                 </div>
-                <div className="jsline">
+                <div className="cssline">
                   <p className="htlm">JavaScript</p>
-                  <p className="perc">70%</p>
+                  <p className="perc">85%</p>
                 </div>
                 <div className="reactline">
                   <p className="htlm">React</p>
@@ -392,6 +382,10 @@ function App() {
                 <div className="reactline n">
                   <p className="htlm">React Native</p>
                   <p className="perc">95%</p>
+                </div>
+                <div className="jsline ">
+                  <p className="htlm">Flutter</p>
+                  <p className="perc">75%</p>
                 </div>
               </div>
             </div>
@@ -402,12 +396,11 @@ function App() {
                   section !== "designer"
                     ? () => setSection("designer")
                     : () => setSection("")
-                }
-              >
+                }>
                 <MdStyle size={35} color="lightblue" />
                 <div className="skills">
                   <p className="skillTitle">Designer</p>
-                  <p className="skillYear">More than 2 years</p>
+                  <p className="skillYear">More than 4 years</p>
                 </div>
 
                 <BiChevronDown size={35} color="lightblue" />
@@ -426,25 +419,24 @@ function App() {
                   section !== "backend"
                     ? () => setSection("backend")
                     : () => setSection("")
-                }
-              >
+                }>
                 <CgDatabase size={35} color="lightblue" />
                 <div className="skills">
                   <p className="skillTitle">BackEnd Developer</p>
-                  <p className="skillYear">More than 2 years</p>
+                  <p className="skillYear">More than 5 years</p>
                 </div>
 
                 <BiChevronDown size={35} color="lightblue" />
               </div>
 
               <div className="drop backend">
-                <div className="jsline n">
+                <div className="cssline n">
                   <p className="htlm">Express JS</p>
-                  <p className="perc">70%</p>
+                  <p className="perc">85%</p>
                 </div>
                 <div className="pyline">
                   <p className="htlm">Python</p>
-                  <p className="perc">50%</p>
+                  <p className="perc">60%</p>
                 </div>
               </div>
             </div>
@@ -455,8 +447,7 @@ function App() {
                   section !== "platform"
                     ? () => setSection("platform")
                     : () => setSection("")
-                }
-              >
+                }>
                 <SiWordpress size={35} color="lightblue" />
                 <div className="skills">
                   <p className="skillTitle">Platform</p>
@@ -489,8 +480,7 @@ function App() {
           style={{
             marginTop:
               section === "backend" || section === "front" ? null : 100,
-          }}
-        >
+          }}>
           <p className="title">Services</p>
           <p className="title2">What i offer</p>
           <div className="skillsRow">
@@ -500,8 +490,7 @@ function App() {
                 section !== "service1"
                   ? () => setSection("service1")
                   : () => setSection("")
-              }
-            >
+              }>
               <MdStyle size={35} color="lightblue" />
               <p className="serviceTitle">UI / UX</p>
               <div className="row">
@@ -526,8 +515,7 @@ function App() {
                 section !== "service2"
                   ? () => setSection("service2")
                   : () => setSection("")
-              }
-            >
+              }>
               <BiCodeCurly size={35} color="lightblue" />
               <p className="serviceTitle">FrontEnd</p>
               <div className="row">
@@ -561,8 +549,7 @@ function App() {
                 section !== "service3"
                   ? () => setSection("service3")
                   : () => setSection("")
-              }
-            >
+              }>
               <CgDatabase size={35} color="lightblue" />
               <p className="serviceTitle">BackEnd</p>
               <div className="row">
@@ -589,8 +576,7 @@ function App() {
                 section !== "service4"
                   ? () => setSection("service4")
                   : () => setSection("")
-              }
-            >
+              }>
               <SiWordpress size={35} color="lightblue" />
               <p className="serviceTitle">Platforms</p>
               <div className="row">
@@ -633,8 +619,7 @@ function App() {
                     counter === 1
                       ? "slide-item slide-active"
                       : "slide-item slide-2"
-                  }
-                >
+                  }>
                   <img alt="" src={main} />
 
                   <div className="portfolio">
@@ -653,8 +638,7 @@ function App() {
                       : counter > 2
                       ? "slide-item slide-2"
                       : "slide-item slide-1"
-                  }
-                >
+                  }>
                   <img alt="" src={website} className="border" />
                   <div className="portfolio">
                     <p className="portfolio-title">Multi Vendor</p>
@@ -670,8 +654,7 @@ function App() {
                     counter === 3
                       ? "slide-item slide-active"
                       : "slide-item slide-1"
-                  }
-                >
+                  }>
                   <img alt="" src={reUseMain} className="phone" />
                   <div className="portfolio">
                     <p className="portfolio-title">UI/UX</p>
